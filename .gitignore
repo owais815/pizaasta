@@ -1,6 +1,16 @@
 node_modules/
-package.json
-package-lock.json
 shots/
 *.log
 .DS_Store
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# vercel
+.vercel
+
+# env files
+.env*
