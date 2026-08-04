@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Color theme switcher
+  var themeSelect = document.getElementById("themeSelect");
+  if (themeSelect) {
+    themeSelect.value = localStorage.getItem("pizaasta-theme") || "yellow";
+    themeSelect.addEventListener("change", function () {
+      document.documentElement.setAttribute("data-theme", themeSelect.value);
+      localStorage.setItem("pizaasta-theme", themeSelect.value);
+    });
+  }
+
   // Footer year
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

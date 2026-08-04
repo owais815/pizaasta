@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("pizaasta-theme");
+    if (saved) document.documentElement.setAttribute("data-theme", saved);
+  })();
+</script>
 </head>
 <body>
 
@@ -39,6 +45,14 @@
     </nav>
 
     <div class="header-actions">
+      <div class="theme-switcher">
+        <label for="themeSelect" class="sr-only">Color theme</label>
+        <select id="themeSelect">
+          <option value="yellow">🟡 Classic Yellow</option>
+          <option value="red">🔴 Vibrant Red</option>
+          <option value="minimal">⚫ Minimal Mono</option>
+        </select>
+      </div>
       <a href="https://wa.me/923375415777" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
         <svg class="ico-whatsapp" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
         WhatsApp Order
