@@ -347,7 +347,7 @@ h1, h2, h3, h4 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../images/hero-melts-right.jpg");
+  background-image: url("/images/hero-melts-right.jpg");
   background-size: cover;
   background-position: center 18%;
   transform: scale(1.02);
