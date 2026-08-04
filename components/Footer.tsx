@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -8,7 +10,7 @@ export default function Footer() {
           <div>
             <a href="#home" className="logo-lockup">
               <span className="logo-badge">
-                <img src="/images/logo.png" alt="Pizaasta logo" width={52} height={52} />
+                <Image src="/images/logo.png" alt="Pizaasta logo" width={52} height={52} />
               </span>
               <span className="logo-word">
                 PIZAASTA

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Header() {
@@ -11,7 +12,7 @@ export default function Header() {
       <div className="container">
         <a href="#home" className="logo-lockup">
           <span className="logo-badge">
-            <img src="/images/logo.png" alt="Pizaasta logo" width={52} height={52} />
+            <Image src="/images/logo.png" alt="Pizaasta logo" width={52} height={52} priority />
           </span>
           <span className="logo-word">
             PIZAASTA

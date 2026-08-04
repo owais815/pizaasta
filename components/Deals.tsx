@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLightbox } from "@/lib/lightbox-context";
 
 type Deal = {
@@ -70,7 +71,14 @@ export default function Deals() {
                 className="deal-item-img js-lightbox-trigger"
                 onClick={() => open(deal.image, deal.alt)}
               >
-                <img src={deal.image} alt={deal.alt} loading="lazy" />
+                <Image
+                  src={deal.image}
+                  alt={deal.alt}
+                  width={1032}
+                  height={1350}
+                  sizes="(max-width: 600px) 45vw, (max-width: 980px) 30vw, 260px"
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
               <a
                 href={deal.phase4Href}
@@ -97,10 +105,13 @@ export default function Deals() {
               )
             }
           >
-            <img
+            <Image
               src="/images/deal-5.jpg"
               alt="Deal 5 — Double the Crown Crust: 2 Large Crown Crust Pizzas, 1.5L Drink for Rs 2899"
-              loading="lazy"
+              width={1032}
+              height={1350}
+              sizes="(max-width: 820px) 100vw, 45vw"
+              style={{ width: "100%", height: "100%" }}
             />
           </div>
           <div className="deal-featured-text">
