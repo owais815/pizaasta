@@ -16,6 +16,8 @@ const jpegJobs = [
   { pattern: /^menu-grid\.jpg$/, maxWidth: 1200, quality: 80 },
   { pattern: /^hero-melts-right\.jpg$/, maxWidth: 2000, quality: 78 },
   { pattern: /^menu-board\.jpg$/, maxWidth: 1800, quality: 84 },
+  { pattern: /^hero-deal-[1-5]\.jpg$/, maxWidth: 2400, quality: 78 },
+  { pattern: /^serve-.*\.jpg$/, maxWidth: 900, quality: 80 },
 ];
 
 async function run() {

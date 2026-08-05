@@ -12,5 +12,8 @@ next-env.d.ts
 # vercel
 .vercel
 
+# npm (this project uses pnpm — see pnpm-lock.yaml)
+package-lock.json
+
 # env files
 .env*
