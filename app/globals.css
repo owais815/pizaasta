@@ -224,6 +224,22 @@ h4 {
   color: var(--highlight-soft);
 }
 
+.header .logo-badge {
+  --badge-size: 64px;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.header .logo-badge img {
+  object-fit: contain;
+}
+
+.header .logo-word {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
 /* ===== Header ===== */
 
 .header {

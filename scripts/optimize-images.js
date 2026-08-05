@@ -47,6 +47,20 @@ async function run() {
       continue;
     }
 
+    if (file === "logo-transparent.png") {
+      const buffer = await sharp(filePath, { limitInputPixels: false })
+        .resize(320, 320)
+        .png({ compressionLevel: 9 })
+        .toBuffer();
+      fs.writeFileSync(tmpPath, buffer);
+      fs.renameSync(tmpPath, filePath);
+      const after = buffer.length;
+      totalBefore += before;
+      totalAfter += after;
+      console.log(`${file}\t${(before / 1024).toFixed(0)}KB -> ${(after / 1024).toFixed(0)}KB`);
+      continue;
+    }
+
     const job = jpegJobs.find((j) => j.pattern.test(file));
     if (!job) continue;
 

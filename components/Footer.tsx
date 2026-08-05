@@ -14,7 +14,7 @@ export default function Footer() {
                 <Image src="/images/logo.png" alt="Pizzasta logo" width={52} height={52} />
               </span>
               <span className="logo-word">
-                PIZAASTA
+                PIZZASTA
                 <span>Every Bite Melts Right</span>
               </span>
             </a>

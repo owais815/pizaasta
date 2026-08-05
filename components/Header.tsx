@@ -15,12 +15,9 @@ export default function Header() {
       <div className="container">
         <a href="#home" className="logo-lockup">
           <span className="logo-badge">
-            <Image src="/images/logo.png" alt="Pizzasta logo" width={52} height={52} priority />
+            <Image src="/images/logo-transparent.png" alt="Pizzasta logo" width={60} height={60} priority />
           </span>
-          <span className="logo-word">
-            PIZAASTA
-            <span>Every Bite Melts Right</span>
-          </span>
+          <span className="logo-word">PIZZASTA</span>
         </a>
 
         <nav className="nav-links">
