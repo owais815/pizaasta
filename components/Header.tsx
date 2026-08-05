@@ -15,7 +15,7 @@ export default function Header() {
       <div className="container">
         <a href="#home" className="logo-lockup">
           <span className="logo-badge">
-            <Image src="/images/logo.png" alt="Pizaasta logo" width={52} height={52} priority />
+            <Image src="/images/logo.png" alt="Pizzasta logo" width={52} height={52} priority />
           </span>
           <span className="logo-word">
             PIZAASTA
@@ -24,31 +24,35 @@ export default function Header() {
         </a>
 
         <nav className="nav-links">
-          <a href="#home" onClick={() => setNavOpen(false)}>Home</a>
-          <a href="#deals" onClick={() => setNavOpen(false)}>Deals</a>
-          <a href="#menu" onClick={() => setNavOpen(false)}>Menu</a>
-          <a href="#specials" onClick={() => setNavOpen(false)}>Specials</a>
-          <a href="#locations" onClick={() => setNavOpen(false)}>Locations</a>
+          <a href="#home" onClick={() => setNavOpen(false)}>
+            Home
+          </a>
+          <a href="#deals" onClick={() => setNavOpen(false)}>
+            Deals
+          </a>
+          <a href="#menu" onClick={() => setNavOpen(false)}>
+            Menu
+          </a>
+          <a href="#specials" onClick={() => setNavOpen(false)}>
+            Specials
+          </a>
+          <a href="#locations" onClick={() => setNavOpen(false)}>
+            Locations
+          </a>
         </nav>
 
         <div className="header-actions">
           <BranchSwitcher />
-          <a
-            href={waHref(branch)}
-            target="_blank"
-            rel="noopener"
-            className="btn btn-primary btn-sm"
-          >
-            <svg className="ico-whatsapp" aria-hidden="true"><use href="#icon-whatsapp" /></svg>
+          <a href={waHref(branch)} target="_blank" rel="noopener" className="btn btn-primary btn-sm">
+            <svg className="ico-whatsapp" aria-hidden="true">
+              <use href="#icon-whatsapp" />
+            </svg>
             WhatsApp Order
           </a>
-          <button
-            className="nav-toggle"
-            id="navToggle"
-            aria-label="Toggle menu"
-            onClick={() => setNavOpen((v) => !v)}
-          >
-            <span></span><span></span><span></span>
+          <button className="nav-toggle" id="navToggle" aria-label="Toggle menu" onClick={() => setNavOpen((v) => !v)}>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </div>

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { LightboxProvider } from "@/lib/lightbox-context";
 import { BranchProvider } from "@/lib/branch-context";
+import { OrderModalProvider } from "@/lib/order-modal-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pizaasta — Every Bite Melts Right | Bahria Town, Rawalpindi",
+  title: "Pizzasta — Every Bite Melts Right | Bahria Town, Rawalpindi",
   description:
-    "Pizaasta — oven-fresh pizza, cheesy pasta, spin rolls & loaded fries in Bahria Town, Rawalpindi. Order now from Phase 4 or Phase 8.",
+    "Pizzasta — oven-fresh pizza, cheesy pasta, spin rolls & loaded fries in Bahria Town, Rawalpindi. Order now from Phase 4 or Phase 8.",
   icons: {
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23FFC91E' stroke='%23A80E16' stroke-width='6'/%3E%3Ctext x='50' y='64' font-size='55' text-anchor='middle'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E",
   },
@@ -30,7 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </symbol>
         </svg>
         <BranchProvider>
-          <LightboxProvider>{children}</LightboxProvider>
+          <OrderModalProvider>
+            <LightboxProvider>{children}</LightboxProvider>
+          </OrderModalProvider>
         </BranchProvider>
       </body>
     </html>

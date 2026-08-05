@@ -3,25 +3,25 @@ import Image from "next/image";
 const items = [
   {
     image: "/images/serve-pizza.jpg",
-    alt: "Pizaasta pizza",
+    alt: "Pizzasta pizza",
     title: "Pizza",
     text: "Wood-fired perfection topped with mozzarella, herbs and a burst of flavor in every slice.",
   },
   {
     image: "/images/serve-spin-roll.jpg",
-    alt: "Pizaasta spin roll",
+    alt: "Pizzasta spin roll",
     title: "Spin Roll",
     text: "A delicate roll stuffed with juicy chicken, cheese and fresh veggies — ready to roll into deliciousness.",
   },
   {
     image: "/images/serve-pasta.jpg",
-    alt: "Pizaasta pasta",
+    alt: "Pizzasta pasta",
     title: "Pasta",
     text: "Creamy sauce with tender chicken and vegetables, served with your choice of sides.",
   },
   {
     image: "/images/serve-loaded-fries.jpg",
-    alt: "Pizaasta loaded fries",
+    alt: "Pizzasta loaded fries",
     title: "Loaded Fries",
     text: "Crispy fries piled high with melted cheese, grilled chicken and a drizzle of house sauce.",
   },
@@ -35,8 +35,8 @@ export default function Serve() {
           <span className="section-tag">What we serve</span>
           <h2>Crafted for true pizza lovers</h2>
           <p>
-            Everything at Pizaasta is made fresh to order — from the dough to the dip.
-            Here&apos;s what keeps regulars coming back.
+            Everything at Pizzasta is made fresh to order — from the dough to the dip. Here&apos;s what keeps regulars
+            coming back.
           </p>
         </div>
 

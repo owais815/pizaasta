@@ -8,6 +8,7 @@ import Locations from "@/components/Locations";
 import Footer from "@/components/Footer";
 import FloatingWhatsapp from "@/components/FloatingWhatsapp";
 import Lightbox from "@/components/Lightbox";
+import OrderModal from "@/components/OrderModal";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Footer />
       <FloatingWhatsapp />
       <Lightbox />
+      <OrderModal />
     </>
   );
 }
