@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useLightbox } from "@/lib/lightbox-context";
+import { useBranch } from "@/lib/branch-context";
+import { waHref } from "@/lib/branches";
 
 type Deal = {
   id: number;
@@ -9,8 +11,7 @@ type Deal = {
   alt: string;
   name: string;
   price: string;
-  phase4Href: string;
-  phase8Href: string;
+  msg: string;
 };
 
 const deals: Deal[] = [
@@ -20,8 +21,7 @@ const deals: Deal[] = [
     alt: "Deal 1 — The Perfect Combo: 1 Large Pizza, 1 Special Pasta, 1.5L Drink for Rs 2100",
     name: "The Perfect Combo",
     price: "Rs 2100",
-    phase4Href: "https://wa.me/923375415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%201%20-%20The%20Perfect%20Combo%20(Rs%202100)",
-    phase8Href: "https://wa.me/923075415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%201%20-%20The%20Perfect%20Combo%20(Rs%202100)",
+    msg: "Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%201%20-%20The%20Perfect%20Combo%20(Rs%202100)",
   },
   {
     id: 2,
@@ -29,8 +29,7 @@ const deals: Deal[] = [
     alt: "Deal 2 — All-Star Feast: 1 Medium Pizza, 1 Special Roll, 1L Drink for Rs 1799",
     name: "All-Star Feast",
     price: "Rs 1799",
-    phase4Href: "https://wa.me/923375415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%202%20-%20All-Star%20Feast%20(Rs%201799)",
-    phase8Href: "https://wa.me/923075415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%202%20-%20All-Star%20Feast%20(Rs%201799)",
+    msg: "Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%202%20-%20All-Star%20Feast%20(Rs%201799)",
   },
   {
     id: 3,
@@ -38,8 +37,7 @@ const deals: Deal[] = [
     alt: "Deal 3 — Double the Flavor: 2 Large Pizzas, 1.5L Drink for Rs 2799",
     name: "Double the Flavor",
     price: "Rs 2799",
-    phase4Href: "https://wa.me/923375415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%203%20-%20Double%20the%20Flavor%20(Rs%202799)",
-    phase8Href: "https://wa.me/923075415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%203%20-%20Double%20the%20Flavor%20(Rs%202799)",
+    msg: "Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%203%20-%20Double%20the%20Flavor%20(Rs%202799)",
   },
   {
     id: 4,
@@ -47,13 +45,13 @@ const deals: Deal[] = [
     alt: "Deal 4 — The Ultimate Feast: 1 XL Pizza, 1 Special Pasta, 1 Spin Roll, 1.5L Drink for Rs 3299",
     name: "The Ultimate Feast",
     price: "Rs 3299",
-    phase4Href: "https://wa.me/923375415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%204%20-%20The%20Ultimate%20Feast%20(Rs%203299)",
-    phase8Href: "https://wa.me/923075415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%204%20-%20The%20Ultimate%20Feast%20(Rs%203299)",
+    msg: "Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%204%20-%20The%20Ultimate%20Feast%20(Rs%203299)",
   },
 ];
 
 export default function Deals() {
   const { open } = useLightbox();
+  const { branch } = useBranch();
 
   return (
     <section className="section section-alt" id="deals">
@@ -81,15 +79,12 @@ export default function Deals() {
                 />
               </div>
               <a
-                href={deal.phase4Href}
+                href={waHref(branch, deal.msg)}
                 target="_blank"
                 rel="noopener"
                 className="btn btn-primary btn-block"
               >
                 <svg className="ico-whatsapp" aria-hidden="true"><use href="#icon-whatsapp" /></svg> Order Deal {deal.id}
-              </a>
-              <a href={deal.phase8Href} target="_blank" rel="noopener" className="deal-alt-branch">
-                or order from Phase 8: 0307 5415777
               </a>
             </div>
           ))}
@@ -122,20 +117,12 @@ export default function Deals() {
               more flavour, more happiness — for Rs 2899.
             </p>
             <a
-              href="https://wa.me/923375415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%205%20-%20Double%20the%20Crown%20Crust%20(Rs%202899)"
+              href={waHref(branch, "Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%205%20-%20Double%20the%20Crown%20Crust%20(Rs%202899)")}
               target="_blank"
               rel="noopener"
               className="btn btn-secondary"
             >
               <svg className="ico-whatsapp" aria-hidden="true"><use href="#icon-whatsapp" /></svg> Order Deal 5
-            </a>
-            <a
-              href="https://wa.me/923075415777?text=Hi%20Pizaasta%2C%20I%27d%20like%20to%20order%20Deal%205%20-%20Double%20the%20Crown%20Crust%20(Rs%202899)"
-              target="_blank"
-              rel="noopener"
-              className="deal-alt-branch deal-alt-branch-light"
-            >
-              or order from Phase 8: 0307 5415777
             </a>
           </div>
         </div>

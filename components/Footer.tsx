@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FooterOrder from "./FooterOrder";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -34,17 +35,16 @@ export default function Footer() {
               </ul>
             </div>
             <div className="footer-col">
-              <h4>Phase 4</h4>
+              <h4>Order Now</h4>
               <ul>
-                <li><a href="tel:+923375415777">0337-5415777</a></li>
-                <li><a href="https://wa.me/923375415777" target="_blank" rel="noopener">WhatsApp Order</a></li>
+                <FooterOrder />
               </ul>
             </div>
             <div className="footer-col">
-              <h4>Phase 8</h4>
+              <h4>Locations</h4>
               <ul>
-                <li><a href="tel:+923075415777">0307-5415777</a></li>
-                <li><a href="https://wa.me/923075415777" target="_blank" rel="noopener">WhatsApp Order</a></li>
+                <li><a href="#locations">Phase 4 — Civic Centre</a></li>
+                <li><a href="#locations">Phase 8 — Hub Commercial</a></li>
               </ul>
             </div>
           </div>

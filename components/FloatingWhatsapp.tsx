@@ -1,7 +1,14 @@
+"use client";
+
+import { useBranch } from "@/lib/branch-context";
+import { waHref } from "@/lib/branches";
+
 export default function FloatingWhatsapp() {
+  const { branch } = useBranch();
+
   return (
     <a
-      href="https://wa.me/923375415777"
+      href={waHref(branch)}
       target="_blank"
       rel="noopener"
       className="float-whatsapp"
