@@ -54,7 +54,7 @@ export default function Deals() {
   const { branch } = useBranch();
 
   return (
-    <section className="section section-alt" id="deals">
+    <section className="section" id="deals">
       <div className="container">
         <div className="section-head">
           <span className="section-tag">Deals</span>

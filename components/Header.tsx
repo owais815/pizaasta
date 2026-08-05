@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import ThemeSwitcher from "./ThemeSwitcher";
 import BranchSwitcher from "./BranchSwitcher";
 import { useBranch } from "@/lib/branch-context";
 import { waHref } from "@/lib/branches";
@@ -34,7 +33,6 @@ export default function Header() {
 
         <div className="header-actions">
           <BranchSwitcher />
-          <ThemeSwitcher />
           <a
             href={waHref(branch)}
             target="_blank"
