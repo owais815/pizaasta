@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useLightbox } from "@/lib/lightbox-context";
 
@@ -33,8 +34,25 @@ const galleryItems = [
   { image: "/images/promo-one-bite.jpg", alt: "One bite, zero regrets — roll and fries", width: 1400, height: 1869 },
 ];
 
+const AUTOPLAY_MS = 5000;
+
 export default function Specials() {
   const { open } = useLightbox();
+  const [index, setIndex] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const goTo = useCallback((i: number) => {
+    setIndex((i + galleryItems.length) % galleryItems.length);
+  }, []);
+
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      setIndex((i) => (i + 1) % galleryItems.length);
+    }, AUTOPLAY_MS);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [index]);
 
   return (
     <section className="section" id="specials">
@@ -62,6 +80,51 @@ export default function Specials() {
               />
             </div>
           ))}
+        </div>
+
+        <div className="specials-carousel-wrap">
+          <div className="hero-carousel specials-carousel">
+            <div className="hero-track" style={{ transform: `translateX(-${index * 100}%)` }}>
+              {galleryItems.map((item) => (
+                <div
+                  key={item.image}
+                  className="hero-slide js-lightbox-trigger"
+                  onClick={() => open(item.image, item.alt)}
+                >
+                  <Image src={item.image} alt={item.alt} fill sizes="100vw" style={{ objectFit: "cover" }} />
+                </div>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              className="hero-arrow hero-arrow-prev"
+              onClick={() => goTo(index - 1)}
+              aria-label="Previous special"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              className="hero-arrow hero-arrow-next"
+              onClick={() => goTo(index + 1)}
+              aria-label="Next special"
+            >
+              ›
+            </button>
+
+            <div className="hero-dots">
+              {galleryItems.map((item, i) => (
+                <button
+                  key={item.image}
+                  type="button"
+                  className={`hero-dot${i === index ? " active" : ""}`}
+                  onClick={() => goTo(i)}
+                  aria-label={`Go to special ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
