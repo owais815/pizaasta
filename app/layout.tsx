@@ -5,6 +5,7 @@ import { OrderModalProvider } from "@/lib/order-modal-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pizzasta.co"),
   title: "Pizzasta — Every Bite Melts Right | Bahria Town, Rawalpindi",
   description:
     "Pizzasta — oven-fresh pizza, cheesy pasta, spin rolls & loaded fries in Bahria Town, Rawalpindi. Order now from Phase 4 or Phase 8.",
