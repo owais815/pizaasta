@@ -80,14 +80,16 @@ h4 {
 .section-tag {
   display: inline-block;
   font-family: var(--font-head);
-  color: var(--primary);
-  background: var(--highlight-soft);
-  padding: 6px 18px;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--primary);
+  padding: 8px 22px;
   border-radius: 999px;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(216, 35, 35, 0.35);
 }
 
 .section-head h2 {
@@ -236,6 +238,7 @@ h4 {
 }
 
 .header .logo-word {
+  font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
 }
@@ -690,6 +693,7 @@ h4 {
 .deal-featured-text .section-tag {
   background: var(--highlight);
   color: var(--black);
+  box-shadow: 0 4px 14px rgba(255, 201, 30, 0.4);
 }
 
 .deal-featured-text h3 {

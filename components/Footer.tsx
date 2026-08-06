@@ -19,8 +19,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="footer-tagline">
-              Wood-fired pizza, spin rolls, cheesy pasta &amp; loaded fries — freshly made across Bahria Town,
-              Rawalpindi.
+              Pizza, Cheezy Pasta, Spin Rolls, and Loaded Fries are freshly made across Rawalpindi / Islamabad.
             </p>
           </div>
 

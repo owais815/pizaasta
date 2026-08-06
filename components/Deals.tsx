@@ -14,6 +14,10 @@ type Deal = {
   msg: string;
 };
 
+function orderMsg(dealNumber: number, name: string, price: string): string {
+  return `🌐 Website Order\n\nHi PIZZASTA,\n\nI'd like to order:\n🍕 Deal ${dealNumber} – ${name} (${price})\n\nPlease confirm my order.`;
+}
+
 const deals: Deal[] = [
   {
     id: 1,
@@ -21,7 +25,7 @@ const deals: Deal[] = [
     alt: "Deal 1 — The Perfect Combo: 1 Large Pizza, 1 Special Pasta, 1.5L Drink for Rs 2100",
     name: "The Perfect Combo",
     price: "Rs 2100",
-    msg: "Hi%20Pizzasta%2C%20I%27d%20like%20to%20order%20Deal%201%20-%20The%20Perfect%20Combo%20(Rs%202100)",
+    msg: orderMsg(1, "The Perfect Combo", "Rs 2,100"),
   },
   {
     id: 2,
@@ -29,7 +33,7 @@ const deals: Deal[] = [
     alt: "Deal 2 — All-Star Feast: 1 Medium Pizza, 1 Special Roll, 1L Drink for Rs 1799",
     name: "All-Star Feast",
     price: "Rs 1799",
-    msg: "Hi%20Pizzasta%2C%20I%27d%20like%20to%20order%20Deal%202%20-%20All-Star%20Feast%20(Rs%201799)",
+    msg: orderMsg(2, "All-Star Feast", "Rs 1,799"),
   },
   {
     id: 3,
@@ -37,7 +41,7 @@ const deals: Deal[] = [
     alt: "Deal 3 — Double the Flavor: 2 Large Pizzas, 1.5L Drink for Rs 2799",
     name: "Double the Flavor",
     price: "Rs 2799",
-    msg: "Hi%20Pizzasta%2C%20I%27d%20like%20to%20order%20Deal%203%20-%20Double%20the%20Flavor%20(Rs%202799)",
+    msg: orderMsg(3, "Double the Flavor", "Rs 2,799"),
   },
   {
     id: 4,
@@ -45,7 +49,7 @@ const deals: Deal[] = [
     alt: "Deal 4 — The Ultimate Feast: 1 XL Pizza, 1 Special Pasta, 1 Spin Roll, 1.5L Drink for Rs 3299",
     name: "The Ultimate Feast",
     price: "Rs 3299",
-    msg: "Hi%20Pizzasta%2C%20I%27d%20like%20to%20order%20Deal%204%20-%20The%20Ultimate%20Feast%20(Rs%203299)",
+    msg: orderMsg(4, "The Ultimate Feast", "Rs 3,299"),
   },
 ];
 
@@ -112,10 +116,7 @@ export default function Deals() {
               for Rs 2899.
             </p>
             <a
-              href={waHref(
-                branch,
-                "Hi%20Pizzasta%2C%20I%27d%20like%20to%20order%20Deal%205%20-%20Double%20the%20Crown%20Crust%20(Rs%202899)",
-              )}
+              href={waHref(branch, orderMsg(5, "Double the Crown Crust", "Rs 2,899"))}
               target="_blank"
               rel="noopener"
               className="btn btn-secondary"

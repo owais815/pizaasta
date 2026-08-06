@@ -37,7 +37,7 @@ export const BRANCH_STORAGE_KEY = "pizzasta-branch";
 export const ORDER_TYPE_STORAGE_KEY = "pizzasta-order-type";
 
 export function waHref(branch: Branch, msg?: string): string {
-  return `https://wa.me/${branch.phone}${msg ? `?text=${msg}` : ""}`;
+  return `https://wa.me/${branch.phone}${msg ? `?text=${encodeURIComponent(msg)}` : ""}`;
 }
 
 export function telHref(branch: Branch): string {
