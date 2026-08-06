@@ -8,6 +8,7 @@
   --highlight-soft: #ffe066;
   --white: #ffffff;
   --black: #1a1a1a;
+  --brown: #7a3e1d;
   --shadow: 0 10px 30px rgba(26, 26, 26, 0.18);
   --radius: 18px;
   --radius-sm: 10px;
@@ -241,6 +242,7 @@ h4 {
   font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
+  color: var(--brown);
 }
 
 /* ===== Header ===== */
@@ -1157,6 +1159,11 @@ h4 {
 }
 
 @media (max-width: 760px) {
+  .header {
+    background: var(--bg-yellow);
+    backdrop-filter: none;
+  }
+
   .nav-links,
   .header-actions .branch-switcher,
   .header-actions .btn {
