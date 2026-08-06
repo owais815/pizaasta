@@ -228,7 +228,7 @@ h4 {
 }
 
 .header .logo-badge {
-  --badge-size: 64px;
+  --badge-size: clamp(40px, 9vw, 64px);
   border-radius: 0;
   overflow: visible;
   box-shadow: none;
@@ -240,9 +240,10 @@ h4 {
 
 .header .logo-word {
   font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.4rem, 6vw, 2.5rem);
   font-weight: 800;
   color: var(--brown);
+  white-space: nowrap;
 }
 
 /* ===== Header ===== */
@@ -1172,7 +1173,7 @@ h4 {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1080px) {
   .nav-links,
   .header-actions .branch-switcher,
   .header-actions .btn {
@@ -1209,7 +1210,9 @@ h4 {
   .header.nav-open .header-actions .btn {
     display: none;
   }
+}
 
+@media (max-width: 760px) {
   .section {
     padding: 60px 0;
   }
