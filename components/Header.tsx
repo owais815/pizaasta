@@ -21,6 +21,9 @@ export default function Header() {
         </a>
 
         <nav className="nav-links">
+          <div className="nav-branch-row" onClick={() => setNavOpen(false)}>
+            <BranchSwitcher />
+          </div>
           <a href="#home" onClick={() => setNavOpen(false)}>
             Home
           </a>
