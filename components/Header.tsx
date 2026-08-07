@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import BranchSwitcher from "./BranchSwitcher";
 import { useBranch } from "@/lib/branch-context";
-import { waHref } from "@/lib/branches";
+import { GENERIC_ORDER_MSG, waHref } from "@/lib/branches";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
@@ -43,7 +43,7 @@ export default function Header() {
 
         <div className="header-actions">
           <BranchSwitcher />
-          <a href={waHref(branch)} target="_blank" rel="noopener" className="btn btn-primary btn-sm">
+          <a href={waHref(branch, GENERIC_ORDER_MSG)} target="_blank" rel="noopener" className="btn btn-primary btn-sm">
             <svg className="ico-whatsapp" aria-hidden="true">
               <use href="#icon-whatsapp" />
             </svg>

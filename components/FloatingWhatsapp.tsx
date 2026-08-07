@@ -1,14 +1,14 @@
 "use client";
 
 import { useBranch } from "@/lib/branch-context";
-import { waHref } from "@/lib/branches";
+import { GENERIC_ORDER_MSG, waHref } from "@/lib/branches";
 
 export default function FloatingWhatsapp() {
   const { branch } = useBranch();
 
   return (
     <a
-      href={waHref(branch)}
+      href={waHref(branch, GENERIC_ORDER_MSG)}
       target="_blank"
       rel="noopener"
       className="float-whatsapp"

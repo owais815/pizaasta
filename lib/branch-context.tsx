@@ -52,7 +52,10 @@ export function BranchProvider({ children }: { children: ReactNode }) {
           // Permission denied, timeout, or position unavailable — keep the current branch.
           resolve(null);
         },
-        { timeout: 6000 }
+        // A generous timeout matters here: the clock starts before the browser's
+        // permission prompt is even shown, so a short timeout can fire while the
+        // user is still deciding whether to click "Allow".
+        { timeout: 20000, maximumAge: 300000 }
       );
     });
   }

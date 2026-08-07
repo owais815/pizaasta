@@ -1,5 +1,4 @@
 import Image from "next/image";
-import FooterOrder from "./FooterOrder";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -39,12 +38,6 @@ export default function Footer() {
                 <li>
                   <a href="#locations">Locations</a>
                 </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Order Now</h4>
-              <ul>
-                <FooterOrder />
               </ul>
             </div>
             <div className="footer-col">

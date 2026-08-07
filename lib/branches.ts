@@ -36,6 +36,9 @@ export const DEFAULT_BRANCH: BranchId = "phase4";
 export const BRANCH_STORAGE_KEY = "pizzasta-branch";
 export const ORDER_TYPE_STORAGE_KEY = "pizzasta-order-type";
 
+export const GENERIC_ORDER_MSG =
+  "PIZZASTA - Website Order\n\nHi,\nI would like to order from Pizzasta. Could you please share your menu?";
+
 export function waHref(branch: Branch, msg?: string): string {
   return `https://wa.me/${branch.phone}${msg ? `?text=${encodeURIComponent(msg)}` : ""}`;
 }

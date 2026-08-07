@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useLightbox } from "@/lib/lightbox-context";
 
 const galleryItems = [
+  { image: "/images/promo-pizza-perfection.jpg", alt: "Pizza perfection in every bite", width: 1400, height: 1846 },
+  { image: "/images/promo-one-bite.jpg", alt: "One bite, zero regrets — roll and fries", width: 1400, height: 1869 },
+  { image: "/images/promo-loaded-fries.jpg", alt: "Loaded Fries — snack time essential", width: 1400, height: 1751 },
   {
     image: "/images/promo-cheese-lover.jpg",
     alt: "Cheese Lover pizza — say yes to extra cheese",
@@ -17,7 +20,6 @@ const galleryItems = [
     width: 1400,
     height: 1751,
   },
-  { image: "/images/promo-loaded-fries.jpg", alt: "Loaded Fries — snack time essential", width: 1400, height: 1751 },
   {
     image: "/images/promo-oven-fresh.jpg",
     alt: "Oven fresh pizza crafted for true pizza lovers",
@@ -30,16 +32,20 @@ const galleryItems = [
     width: 1400,
     height: 1750,
   },
-  { image: "/images/promo-pizza-perfection.jpg", alt: "Pizza perfection in every bite", width: 1400, height: 1846 },
-  { image: "/images/promo-one-bite.jpg", alt: "One bite, zero regrets — roll and fries", width: 1400, height: 1869 },
 ];
 
 const AUTOPLAY_MS = 5000;
+const DESKTOP_ITEMS_PER_VIEW = 3;
+const DESKTOP_AUTOPLAY_MS = 4000;
+const DESKTOP_MAX_INDEX = Math.max(galleryItems.length - DESKTOP_ITEMS_PER_VIEW, 0);
 
 export default function Specials() {
   const { open } = useLightbox();
   const [index, setIndex] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const [deskIndex, setDeskIndex] = useState(0);
+  const deskTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const goTo = useCallback((i: number) => {
     setIndex((i + galleryItems.length) % galleryItems.length);
@@ -54,6 +60,15 @@ export default function Specials() {
     };
   }, [index]);
 
+  useEffect(() => {
+    deskTimerRef.current = setInterval(() => {
+      setDeskIndex((i) => (i >= DESKTOP_MAX_INDEX ? 0 : i + 1));
+    }, DESKTOP_AUTOPLAY_MS);
+    return () => {
+      if (deskTimerRef.current) clearInterval(deskTimerRef.current);
+    };
+  }, [deskIndex]);
+
   return (
     <section className="section" id="specials">
       <div className="container">
@@ -63,23 +78,38 @@ export default function Specials() {
           <p>A taste of what&apos;s baking, rolling and frying at Pizzasta right now.</p>
         </div>
 
-        <div className="gallery-grid">
-          {galleryItems.map((item) => (
-            <div
-              className="gallery-item js-lightbox-trigger"
-              key={item.image}
-              onClick={() => open(item.image, item.alt)}
-            >
-              <Image
-                src={item.image}
-                alt={item.alt}
-                width={item.width}
-                height={item.height}
-                sizes="(max-width: 700px) 45vw, (max-width: 980px) 45vw, 260px"
-                style={{ width: "100%", height: "auto" }}
+        <div className="specials-desktop-carousel">
+          <div
+            className="specials-desktop-track"
+            style={{ transform: `translateX(-${deskIndex * (100 / DESKTOP_ITEMS_PER_VIEW)}%)` }}
+          >
+            {galleryItems.map((item) => (
+              <div className="specials-desktop-slide" key={item.image}>
+                <div className="gallery-item js-lightbox-trigger" onClick={() => open(item.image, item.alt)}>
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    sizes="(max-width: 1180px) 33vw, 380px"
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="hero-dots specials-desktop-dots">
+            {Array.from({ length: DESKTOP_MAX_INDEX + 1 }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`hero-dot${i === deskIndex ? " active" : ""}`}
+                onClick={() => setDeskIndex(i)}
+                aria-label={`Go to slide group ${i + 1}`}
               />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="specials-carousel-wrap">

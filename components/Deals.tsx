@@ -15,7 +15,7 @@ type Deal = {
 };
 
 function orderMsg(dealNumber: number, name: string, price: string): string {
-  return `🌐 PIZZASTA - Website Order\n\nHi,\nI would like to order:\n\n🍕 Deal ${dealNumber} – ${name} (${price}).\n\nPlease confirm my order.`;
+  return `PIZZASTA - Website Order\n\nHi,\nI would like to order:\n\nDeal ${dealNumber} – ${name} (${price}).\n\nPlease confirm my order.`;
 }
 
 const deals: Deal[] = [
