@@ -239,9 +239,9 @@ h4 {
 }
 
 .header .logo-word {
-  font-family: "Oswald", sans-serif;
+  font-family: "Fredoka", sans-serif;
   font-size: clamp(1.4rem, 6vw, 2.5rem);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--brown);
   white-space: nowrap;
 }
