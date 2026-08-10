@@ -5,7 +5,7 @@ const items = [
     image: "/images/serve-pizza.jpg",
     alt: "Pizzasta pizza",
     title: "Pizza",
-    text: "Wood-fired perfection topped with mozzarella, herbs and a burst of flavor in every slice.",
+    text: "Oven-baked perfection topped with mozzarella, herbs and a burst of flavor in every slice.",
   },
   {
     image: "/images/serve-spin-roll.jpg",

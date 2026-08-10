@@ -20,7 +20,7 @@ export default function Menu() {
         <div className="section-head">
           <span className="section-tag">Our Menu</span>
           <h2>Freshly Baked, Every Time</h2>
-          <p>All prices in PKR. Sizes: S 7&Prime; · M 10&Prime; · L 13&Prime; · XL 16&Prime;</p>
+          {/* <p>All prices in PKR. Sizes: S 7&Prime; · M 10&Prime; · L 13&Prime; · XL 16&Prime;</p> */}
         </div>
 
         <div className="menu-tabs" id="menuTabs">
