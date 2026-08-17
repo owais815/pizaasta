@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Deals from "@/components/Deals";
+import MidnightDeals from "@/components/MidnightDeals";
 import Serve from "@/components/Serve";
 import Menu from "@/components/Menu";
 import Specials from "@/components/Specials";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Deals />
+      <MidnightDeals />
       <Serve />
       <Menu />
       <Specials />

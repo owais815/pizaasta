@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useBranch } from "@/lib/branch-context";
 import { waHref } from "@/lib/branches";
+import { midnightDeals } from "@/lib/midnight-deals";
 
 type Slide = {
   id: number;
@@ -47,6 +48,12 @@ const slides: Slide[] = [
     alt: "Deal 5 — Double the Crown Crust: 2 Large Crown Crust Pizzas, 1.5L Drink for Rs 2899",
     msg: orderMsg(5, "Double the Crown Crust", "Rs 2,899"),
   },
+  ...midnightDeals.map((deal, i) => ({
+    id: 6 + i,
+    image: deal.heroImage,
+    alt: deal.heroAlt,
+    msg: deal.msg,
+  })),
 ];
 
 const AUTOPLAY_MS = 5000;

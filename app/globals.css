@@ -714,6 +714,10 @@ h4 {
   color: #ececec;
 }
 
+.midnight-item-img {
+  aspect-ratio: 1000 / 1500;
+}
+
 /* ===== Specials Gallery ===== */
 
 .gallery-item {
