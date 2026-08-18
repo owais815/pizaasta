@@ -55,12 +55,3 @@ export const midnightDeals: MidnightDeal[] = [
     cardAlt: "Midnight Deal — Single Saver: Small Classic Pizza, Plain Fries (Half), Regular Drink for Rs 719",
   },
 ];
-
-export const midnightFeaturedDeal = {
-  id: 5,
-  name: "Double the Crown Crust",
-  price: "Rs 2899",
-  msg: orderMsg("Double the Crown Crust", "Rs 2,899"),
-  cardImage: "/images/midnight-card-5.jpg",
-  cardAlt: "Midnight Deal — Double the Crown Crust: 2 Large Crown Crust Pizzas for Rs 2899",
-};

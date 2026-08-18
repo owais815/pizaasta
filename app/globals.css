@@ -72,6 +72,10 @@ h4 {
   background: var(--bg-yellow);
 }
 
+.section-midnight {
+  background: #f4ecdf;
+}
+
 .section-head {
   text-align: center;
   max-width: 640px;
@@ -610,6 +614,20 @@ h4 {
 .price-table td:first-child {
   font-weight: 600;
   color: var(--black);
+}
+
+.price-table-sized {
+  table-layout: fixed;
+}
+
+.price-table-sized th:first-child,
+.price-table-sized td:first-child {
+  width: 42%;
+}
+
+.price-table-sized th:not(:first-child),
+.price-table-sized td:not(:first-child) {
+  width: 14.5%;
 }
 
 .addons-grid {

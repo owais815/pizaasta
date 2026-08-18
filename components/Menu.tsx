@@ -40,10 +40,11 @@ export default function Menu() {
           <div className="price-card">
             <h3>Crust Pizzas</h3>
             <p className="price-note">Stuffed crust specialties</p>
-            <table className="price-table">
+            <table className="price-table price-table-sized">
               <thead>
                 <tr>
                   <th>Flavour</th>
+                  <th>S 7&Prime;</th>
                   <th>M 10&Prime;</th>
                   <th>L 13&Prime;</th>
                   <th>XL 16&Prime;</th>
@@ -52,18 +53,21 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Crown Crust</td>
+                  <td>—</td>
                   <td>1200</td>
                   <td>1600</td>
                   <td>2100</td>
                 </tr>
                 <tr>
                   <td>Kabab Stuff</td>
+                  <td>—</td>
                   <td>1200</td>
                   <td>1600</td>
                   <td>2100</td>
                 </tr>
                 <tr>
                   <td>Cheese Stuff</td>
+                  <td>—</td>
                   <td>1200</td>
                   <td>1600</td>
                   <td>2100</td>
@@ -74,10 +78,11 @@ export default function Menu() {
 
           <div className="price-card">
             <h3>Special Pizzas</h3>
-            <table className="price-table">
+            <table className="price-table price-table-sized">
               <thead>
                 <tr>
                   <th>Flavour</th>
+                  <th>S 7&Prime;</th>
                   <th>M 10&Prime;</th>
                   <th>L 13&Prime;</th>
                   <th>XL 16&Prime;</th>
@@ -86,30 +91,35 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Pizzasta Special</td>
+                  <td>—</td>
                   <td>1100</td>
                   <td>1450</td>
                   <td>1950</td>
                 </tr>
                 <tr>
                   <td>Behari Kabab</td>
+                  <td>—</td>
                   <td>1100</td>
                   <td>1450</td>
                   <td>1950</td>
                 </tr>
                 <tr>
                   <td>Chicken Tandoori</td>
+                  <td>—</td>
                   <td>1100</td>
                   <td>1450</td>
                   <td>1950</td>
                 </tr>
                 <tr>
                   <td>Malai Boti</td>
+                  <td>—</td>
                   <td>1100</td>
                   <td>1450</td>
                   <td>1950</td>
                 </tr>
                 <tr>
                   <td>Chicken Extreme</td>
+                  <td>—</td>
                   <td>1100</td>
                   <td>1450</td>
                   <td>1950</td>
@@ -120,7 +130,7 @@ export default function Menu() {
 
           <div className="price-card">
             <h3>Classic Pizzas</h3>
-            <table className="price-table">
+            <table className="price-table price-table-sized">
               <thead>
                 <tr>
                   <th>Flavour</th>
@@ -179,10 +189,12 @@ export default function Menu() {
 
           <div className="price-card">
             <h3>Premium Pizzas</h3>
-            <table className="price-table">
+            <table className="price-table price-table-sized">
               <thead>
                 <tr>
                   <th>Flavour</th>
+                  <th>S 7&Prime;</th>
+                  <th>M 10&Prime;</th>
                   <th>L 13&Prime;</th>
                   <th>XL 16&Prime;</th>
                 </tr>
@@ -190,16 +202,22 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Chicken Cheese Stuffer</td>
+                  <td>—</td>
+                  <td>—</td>
                   <td>1700</td>
                   <td>2250</td>
                 </tr>
                 <tr>
                   <td>Kabab Twister</td>
+                  <td>—</td>
+                  <td>—</td>
                   <td>1700</td>
                   <td>2250</td>
                 </tr>
                 <tr>
                   <td>Peri Peri</td>
+                  <td>—</td>
+                  <td>—</td>
                   <td>1700</td>
                   <td>2250</td>
                 </tr>

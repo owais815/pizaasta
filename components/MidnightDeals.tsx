@@ -4,14 +4,14 @@ import Image from "next/image";
 import { useLightbox } from "@/lib/lightbox-context";
 import { useBranch } from "@/lib/branch-context";
 import { waHref } from "@/lib/branches";
-import { midnightDeals, midnightFeaturedDeal } from "@/lib/midnight-deals";
+import { midnightDeals } from "@/lib/midnight-deals";
 
 export default function MidnightDeals() {
   const { open } = useLightbox();
   const { branch } = useBranch();
 
   return (
-    <section className="section section-alt" id="midnight-deals">
+    <section className="section section-midnight" id="midnight-deals">
       <div className="container">
         <div className="section-head">
           <span className="section-tag">Midnight Deals</span>
@@ -43,41 +43,6 @@ export default function MidnightDeals() {
               </a>
             </div>
           ))}
-        </div>
-
-        <div className="deal-featured">
-          <div
-            className="deal-featured-img js-lightbox-trigger"
-            onClick={() => open(midnightFeaturedDeal.cardImage, midnightFeaturedDeal.cardAlt)}
-          >
-            <Image
-              src={midnightFeaturedDeal.cardImage}
-              alt={midnightFeaturedDeal.cardAlt}
-              width={1000}
-              height={1405}
-              sizes="(max-width: 820px) 100vw, 45vw"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </div>
-          <div className="deal-featured-text">
-            <span className="section-tag">Featured — Midnight Deal 5</span>
-            <h3>{midnightFeaturedDeal.name}</h3>
-            <p>
-              Two large stuffed-crust Crown Crust pizzas. More cheese, more flavour, more happiness — for{" "}
-              {midnightFeaturedDeal.price}.
-            </p>
-            <a
-              href={waHref(branch, midnightFeaturedDeal.msg)}
-              target="_blank"
-              rel="noopener"
-              className="btn btn-secondary"
-            >
-              <svg className="ico-whatsapp" aria-hidden="true">
-                <use href="#icon-whatsapp" />
-              </svg>{" "}
-              Order {midnightFeaturedDeal.name}
-            </a>
-          </div>
         </div>
       </div>
     </section>

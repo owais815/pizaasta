@@ -103,7 +103,7 @@ export default function Deals() {
               src="/images/deal-5.jpg"
               alt="Deal 5 — Double the Crown Crust: 2 Large Crown Crust Pizzas, 1.5L Drink for Rs 2899"
               width={1032}
-              height={1350}
+              height={1450}
               sizes="(max-width: 820px) 100vw, 45vw"
               style={{ width: "100%", height: "100%" }}
             />
