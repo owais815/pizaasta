@@ -20,6 +20,38 @@ export default function Footer() {
             <p className="footer-tagline">
               Pizza, Cheezy Pasta, Spin Rolls, and Loaded Fries are freshly made across Rawalpindi / Islamabad.
             </p>
+            <div className="footer-social">
+              <a
+                href="https://www.facebook.com/people/Pizzasta/61584004487258/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pizzasta on Facebook"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-facebook" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/pizzastapk/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pizzasta on Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-instagram" />
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@pizzastapk?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pizzasta on TikTok"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-tiktok" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div className="footer-cols">
