@@ -657,7 +657,7 @@ h4 {
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: zoom-in;
-  aspect-ratio: 1050 / 1350;
+  aspect-ratio: 1032 / 1459;
   transition: transform 0.2s ease;
   background: var(--white);
   padding: 8px;
