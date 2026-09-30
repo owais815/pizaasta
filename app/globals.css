@@ -504,9 +504,11 @@ h4 {
 
 /* ===== Menu ===== */
 
-.menu-ref-link {
-  display: block;
-  text-align: center;
+.menu-ref-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   margin-top: 36px;
 }
 

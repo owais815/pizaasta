@@ -139,6 +139,13 @@ export default function Menu() {
                   <td>1450</td>
                   <td>1950</td>
                 </tr>
+                <tr>
+                  <td>Pepperoni Perfection</td>
+                  <td>—</td>
+                  <td>1100</td>
+                  <td>1450</td>
+                  <td>1950</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -320,7 +327,7 @@ export default function Menu() {
                   <td>1000</td>
                 </tr>
                 <tr>
-                  <td>Chipotle Smoke</td>
+                  <td>BBQ Smoke</td>
                   <td>525</td>
                   <td>1050</td>
                 </tr>
@@ -373,16 +380,28 @@ export default function Menu() {
           </div>
         </div>
 
-        <a
-          className="menu-ref-link btn btn-outline js-lightbox-trigger"
-          href="/images/menu-board.jpg"
-          onClick={(e) => {
-            e.preventDefault();
-            open("/images/menu-board.jpg", "Pizzasta full menu poster");
-          }}
-        >
-          🔍 View full menu poster
-        </a>
+        <div className="menu-ref-links">
+          <a
+            className="btn btn-outline js-lightbox-trigger"
+            href="/images/menu-board.jpg"
+            onClick={(e) => {
+              e.preventDefault();
+              open("/images/menu-board.jpg", "Pizzasta full menu poster");
+            }}
+          >
+            🔍 View full menu poster
+          </a>
+          <a
+            className="btn btn-outline js-lightbox-trigger"
+            href="/images/menu-deals.jpg"
+            onClick={(e) => {
+              e.preventDefault();
+              open("/images/menu-deals.jpg", "Pizzasta deals menu — Deals 1 to 5 with branch addresses");
+            }}
+          >
+            🔍 View deals menu
+          </a>
+        </div>
       </div>
     </section>
   );
