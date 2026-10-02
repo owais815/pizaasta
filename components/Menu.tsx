@@ -7,6 +7,7 @@ const tabs = [
   { target: "panel-pizza", label: "Pizza" },
   { target: "panel-pasta", label: "Pasta" },
   { target: "panel-fries", label: "Fries" },
+  { target: "panel-wings", label: "Wings" },
   { target: "panel-rolls", label: "Rolls & Drinks" },
 ];
 
@@ -72,6 +73,13 @@ export default function Menu() {
                   <td>1600</td>
                   <td>2100</td>
                 </tr>
+                <tr>
+                  <td>Behari Kabab</td>
+                  <td>—</td>
+                  <td>1200</td>
+                  <td>1600</td>
+                  <td>2100</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -91,13 +99,6 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Pizzasta Special</td>
-                  <td>—</td>
-                  <td>1100</td>
-                  <td>1450</td>
-                  <td>1950</td>
-                </tr>
-                <tr>
-                  <td>Behari Kabab</td>
                   <td>—</td>
                   <td>1100</td>
                   <td>1450</td>
@@ -124,6 +125,27 @@ export default function Menu() {
                   <td>1450</td>
                   <td>1950</td>
                 </tr>
+                <tr>
+                  <td>Chicken Supreme</td>
+                  <td>—</td>
+                  <td>1100</td>
+                  <td>1450</td>
+                  <td>1950</td>
+                </tr>
+                <tr>
+                  <td>Cheese Lover</td>
+                  <td>—</td>
+                  <td>1100</td>
+                  <td>1450</td>
+                  <td>1950</td>
+                </tr>
+                <tr>
+                  <td>Pepperoni Perfection</td>
+                  <td>—</td>
+                  <td>1100</td>
+                  <td>1450</td>
+                  <td>1950</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -143,83 +165,31 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Chicken Tikka BBQ</td>
-                  <td>500</td>
+                  <td>590</td>
                   <td>1000</td>
                   <td>1350</td>
                   <td>1750</td>
                 </tr>
                 <tr>
                   <td>Fajita Sicilian</td>
-                  <td>500</td>
+                  <td>590</td>
                   <td>1000</td>
                   <td>1350</td>
                   <td>1750</td>
                 </tr>
                 <tr>
                   <td>Chicken Fajita</td>
-                  <td>500</td>
+                  <td>590</td>
                   <td>1000</td>
                   <td>1350</td>
                   <td>1750</td>
                 </tr>
                 <tr>
                   <td>Vegetarians</td>
-                  <td>500</td>
+                  <td>590</td>
                   <td>1000</td>
                   <td>1350</td>
                   <td>1750</td>
-                </tr>
-                <tr>
-                  <td>Chicken Supreme</td>
-                  <td>500</td>
-                  <td>1000</td>
-                  <td>1350</td>
-                  <td>1750</td>
-                </tr>
-                <tr>
-                  <td>Cheese Lover</td>
-                  <td>500</td>
-                  <td>1000</td>
-                  <td>1350</td>
-                  <td>1750</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="price-card">
-            <h3>Premium Pizzas</h3>
-            <table className="price-table price-table-sized">
-              <thead>
-                <tr>
-                  <th>Flavour</th>
-                  <th>S 7&Prime;</th>
-                  <th>M 10&Prime;</th>
-                  <th>L 13&Prime;</th>
-                  <th>XL 16&Prime;</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Chicken Cheese Stuffer</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>1700</td>
-                  <td>2250</td>
-                </tr>
-                <tr>
-                  <td>Kabab Twister</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>1700</td>
-                  <td>2250</td>
-                </tr>
-                <tr>
-                  <td>Peri Peri</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>1700</td>
-                  <td>2250</td>
                 </tr>
               </tbody>
             </table>
@@ -277,23 +247,23 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Pizzasta Special</td>
-                  <td>500</td>
+                  <td>600</td>
                   <td>950</td>
                 </tr>
                 <tr>
                   <td>Flaming Pasta</td>
-                  <td>400</td>
-                  <td>750</td>
+                  <td>550</td>
+                  <td>850</td>
                 </tr>
                 <tr>
                   <td>Kababish Pasta</td>
-                  <td>450</td>
+                  <td>550</td>
                   <td>850</td>
                 </tr>
                 <tr>
                   <td>Creamy Pasta</td>
-                  <td>400</td>
-                  <td>750</td>
+                  <td>550</td>
+                  <td>850</td>
                 </tr>
               </tbody>
             </table>
@@ -320,18 +290,51 @@ export default function Menu() {
                 </tr>
                 <tr>
                   <td>Loaded Fries</td>
-                  <td>300</td>
-                  <td>600</td>
+                  <td>400</td>
+                  <td>700</td>
                 </tr>
                 <tr>
                   <td>Malai Boti Fries</td>
-                  <td>400</td>
-                  <td>800</td>
+                  <td>450</td>
+                  <td>850</td>
                 </tr>
                 <tr>
                   <td>Pizza Fries</td>
                   <td>—</td>
                   <td>850</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* WINGS */}
+        <div className={`menu-panel${activeTab === "panel-wings" ? " active" : ""}`} id="panel-wings">
+          <div className="price-card">
+            <h3>Wings Zone</h3>
+            <table className="price-table">
+              <thead>
+                <tr>
+                  <th>Flavour</th>
+                  <th>Half</th>
+                  <th>Full</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Honey Bliss</td>
+                  <td>500</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td>BBQ Smoke</td>
+                  <td>525</td>
+                  <td>1050</td>
+                </tr>
+                <tr>
+                  <td>Peri Peri Fire</td>
+                  <td>550</td>
+                  <td>1100</td>
                 </tr>
               </tbody>
             </table>
@@ -346,15 +349,15 @@ export default function Menu() {
               <tbody>
                 <tr>
                   <td>Spin Roll</td>
-                  <td>520</td>
-                </tr>
-                <tr>
-                  <td>Behari Roll</td>
-                  <td>580</td>
+                  <td>625</td>
                 </tr>
                 <tr>
                   <td>Pizzasta Roll</td>
-                  <td>630</td>
+                  <td>675</td>
+                </tr>
+                <tr>
+                  <td>Behari Roll</td>
+                  <td>700</td>
                 </tr>
               </tbody>
             </table>
@@ -377,16 +380,28 @@ export default function Menu() {
           </div>
         </div>
 
-        <a
-          className="menu-ref-link btn btn-outline js-lightbox-trigger"
-          href="/images/menu-board.jpg"
-          onClick={(e) => {
-            e.preventDefault();
-            open("/images/menu-board.jpg", "Pizzasta full menu poster");
-          }}
-        >
-          🔍 View full menu poster
-        </a>
+        <div className="menu-ref-links">
+          <a
+            className="btn btn-outline js-lightbox-trigger"
+            href="/images/menu-board.jpg"
+            onClick={(e) => {
+              e.preventDefault();
+              open("/images/menu-board.jpg", "Pizzasta full menu poster");
+            }}
+          >
+            🔍 View full menu poster
+          </a>
+          <a
+            className="btn btn-outline js-lightbox-trigger"
+            href="/images/menu-deals.jpg"
+            onClick={(e) => {
+              e.preventDefault();
+              open("/images/menu-deals.jpg", "Pizzasta deals menu — Deals 1 to 5 with branch addresses");
+            }}
+          >
+            🔍 View deals menu
+          </a>
+        </div>
       </div>
     </section>
   );

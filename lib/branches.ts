@@ -14,12 +14,12 @@ export type Branch = {
 export const BRANCHES: Record<BranchId, Branch> = {
   phase4: {
     id: "phase4",
-    label: "Phase 4 — Civic Centre",
+    label: "Gulzar-e-Quaid",
     phone: "923375415777",
     tel: "+923375415777",
     display: "0337-5415777",
-    lat: 33.5527,
-    lng: 73.112,
+    lat: 33.5705,
+    lng: 73.1295,
   },
   phase8: {
     id: "phase8",
