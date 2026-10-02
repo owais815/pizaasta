@@ -30,10 +30,10 @@ const deals: Deal[] = [
   {
     id: 2,
     image: "/images/deal-2.jpg",
-    alt: "Deal 2 — All-Star Feast: 1 Medium Pizza, 1 Special Roll, 1L Drink for Rs 1799",
+    alt: "Deal 2 — All-Star Feast: 1 Special Pizza (Medium), 1 Special Roll, Honey Bliss Wings (Half), 1L Drink for Rs 2099",
     name: "All-Star Feast",
-    price: "Rs 1799",
-    msg: orderMsg(2, "All-Star Feast", "Rs 1,799"),
+    price: "Rs 2099",
+    msg: orderMsg(2, "All-Star Feast", "Rs 2,099"),
   },
   {
     id: 3,
@@ -46,10 +46,10 @@ const deals: Deal[] = [
   {
     id: 4,
     image: "/images/deal-4.jpg",
-    alt: "Deal 4 — The Ultimate Feast: 1 XL Pizza, 1 Special Pasta, 1 Spin Roll, 1.5L Drink for Rs 3299",
+    alt: "Deal 4 — The Ultimate Feast: 1 Special Pizza (XL), 1 Special Pasta (Full), 1 Spin Roll, Peri Peri Fire Wings (Full), 1.5L Drink for Rs 3999",
     name: "The Ultimate Feast",
-    price: "Rs 3299",
-    msg: orderMsg(4, "The Ultimate Feast", "Rs 3,299"),
+    price: "Rs 3999",
+    msg: orderMsg(4, "The Ultimate Feast", "Rs 3,999"),
   },
 ];
 
@@ -74,7 +74,7 @@ export default function Deals() {
                   src={deal.image}
                   alt={deal.alt}
                   width={1032}
-                  height={1350}
+                  height={1459}
                   sizes="(max-width: 600px) 45vw, (max-width: 980px) 30vw, 260px"
                   style={{ width: "100%", height: "100%" }}
                 />
@@ -103,7 +103,7 @@ export default function Deals() {
               src="/images/deal-5.jpg"
               alt="Deal 5 — Double the Crown Crust: 2 Large Crown Crust Pizzas, 1.5L Drink for Rs 2899"
               width={1032}
-              height={1450}
+              height={1459}
               sizes="(max-width: 820px) 100vw, 45vw"
               style={{ width: "100%", height: "100%" }}
             />

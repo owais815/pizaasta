@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://pizzasta.co"),
   title: "PIZZASTA",
   description:
-    "Pizzasta — oven-fresh pizza, cheesy pasta, spin rolls & loaded fries in Bahria Town, Rawalpindi. Order now from Phase 4 or Phase 8.",
+    "Pizzasta — oven-fresh pizza, cheesy pasta, spin rolls & loaded fries in Rawalpindi. Order now from Gulzar-e-Quaid or Bahria Town Phase 8.",
   icons: {
     icon: "/images/logo-transparent-yellow.png",
   },

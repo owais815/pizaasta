@@ -76,7 +76,7 @@ export default function Footer() {
               <h4>Locations</h4>
               <ul>
                 <li>
-                  <a href="#locations">Phase 4 — Civic Centre</a>
+                  <a href="#locations">Gulzar-e-Quaid</a>
                 </li>
                 <li>
                   <a href="#locations">Phase 8 — Hub Commercial</a>
