@@ -27,8 +27,8 @@ const slides: Slide[] = [
   {
     id: 2,
     image: "/images/hero-deal-2.jpg",
-    alt: "Deal 2 — All-Star Feast: 1 Medium Pizza, 1 Special Roll, 1L Drink for Rs 1799",
-    msg: orderMsg(2, "All-Star Feast", "Rs 1,799"),
+    alt: "Deal 2 — All-Star Feast: 1 Special Pizza (Medium), 1 Special Roll, Honey Bliss Wings (Half), 1L Drink for Rs 2099",
+    msg: orderMsg(2, "All-Star Feast", "Rs 2,099"),
   },
   {
     id: 3,
@@ -39,8 +39,8 @@ const slides: Slide[] = [
   {
     id: 4,
     image: "/images/hero-deal-4.jpg",
-    alt: "Deal 4 — The Ultimate Feast: 1 XL Pizza, 1 Special Pasta, 1 Spin Roll, 1.5L Drink for Rs 3299",
-    msg: orderMsg(4, "The Ultimate Feast", "Rs 3,299"),
+    alt: "Deal 4 — The Ultimate Feast: 1 Special Pizza (XL), 1 Special Pasta (Full), 1 Spin Roll, Peri Peri Fire Wings (Full), 1.5L Drink for Rs 3999",
+    msg: orderMsg(4, "The Ultimate Feast", "Rs 3,999"),
   },
   {
     id: 5,
