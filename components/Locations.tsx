@@ -11,7 +11,7 @@ export default function Locations() {
         <div className="section-head">
           <span className="section-tag">Locations</span>
           <h2>Find Your Nearest Pizzasta</h2>
-          <p>Two branches serving Bahria Town, Rawalpindi. Call, WhatsApp, or walk in.</p>
+          <p>Two branches serving Rawalpindi — Gulzar-e-Quaid and Bahria Town Phase 8. Call, WhatsApp, or walk in.</p>
           <button type="button" className="btn btn-primary" onClick={open}>
             🛵 Choose Delivery or Pickup
           </button>
@@ -19,9 +19,9 @@ export default function Locations() {
 
         <div className="locations-grid">
           <div className="location-card">
-            <span className="location-tag">Branch — Phase 4</span>
-            <h3>Civic Centre</h3>
-            <p>Plaza #178, Civic Centre, Near Bank Islami, Phase 4, Bahria Town, Rawalpindi</p>
+            <span className="location-tag">Branch — Gulzar-e-Quaid</span>
+            <h3>Gulzar-e-Quaid</h3>
+            <p>Gulzar-e-Quaid Main Road, Near Caltex Petrol Pump, Gulzar-e-Quaid, Rawalpindi</p>
             <div className="location-actions">
               <a href="tel:+923375415777" className="btn btn-outline btn-sm">
                 📞 0337-5415777
